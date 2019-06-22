@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutomaticTorrentDownloaderConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RefreshDelayMinutes>30</RefreshDelayMinutes>
+  <SearchedMedia>
+    <ParsedMedia>
+      <Title>Lord of the rings</Title>
+      <Resolution>1080p</Resolution>
+    </ParsedMedia>
+  </SearchedMedia>
+  <SearchedSites>
+    <string>LeedX</string>
+    <string>ThePirateBay</string>
+  </SearchedSites>
+</AutomaticTorrentDownloaderConfiguration>

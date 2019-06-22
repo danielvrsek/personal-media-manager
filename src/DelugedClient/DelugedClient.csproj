@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="rencode-net.core" Version="1.0.0" />
+    <PackageReference Include="Vrsek.Common" Version="1.0.6" />
+    <PackageReference Include="zlib-net.core" Version="1.0.0" />
+  </ItemGroup>
+</Project>

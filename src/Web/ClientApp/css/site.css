@@ -1,0 +1,160 @@
+.content {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+table[role=searchResults] {
+	font-size: 90%;
+}
+
+table[role=torrentStatuses] {
+	font-size: 90%;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+	visibility: hidden; /* Hidden by default. Visible on click */
+	min-width: 250px; /* Set a default minimum width */
+	margin-left: -125px; /* Divide value of min-width by 2 */
+	background-color: #333; /* Black background color */
+	color: #fff; /* White text color */
+	text-align: center; /* Centered text */
+	border-radius: 2px; /* Rounded borders */
+	padding: 16px; /* Padding */
+	position: fixed; /* Sit on top of the screen */
+	z-index: 1; /* Add a z-index if needed */
+	left: 50%; /* Center the snackbar */
+	bottom: 30px; /* 30px from the bottom */
+}
+
+	/* Show the snackbar when clicking on a button (class added with JavaScript) */
+	#snackbar.show {
+		visibility: visible; /* Show the snackbar */
+		/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 30px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 30px;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+.main-nav li .glyphicon {
+	margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items */
+.main-nav li a.active,
+.main-nav li a.active:hover,
+.main-nav li a.active:focus {
+	background-color: #4189C7;
+	color: white;
+}
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+.main-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+@media (max-width: 767px) {
+	/* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+	body {
+		padding-top: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	/* On small screens, convert the nav menu to a vertical sidebar */
+	.main-nav {
+		height: 100%;
+		width: 25%;
+	}
+
+		.main-nav .navbar {
+			border-radius: 0px;
+			border-width: 0px;
+			height: 100%;
+		}
+
+		.main-nav .navbar-header {
+			float: none;
+		}
+
+		.main-nav .navbar-collapse {
+			border-top: 1px solid #444;
+			padding: 0px;
+		}
+
+		.main-nav .navbar ul {
+			float: none;
+		}
+
+		.main-nav .navbar li {
+			float: none;
+			font-size: 15px;
+			margin: 6px;
+		}
+
+			.main-nav .navbar li a {
+				padding: 10px 16px;
+				border-radius: 4px;
+			}
+
+		.main-nav .navbar a {
+			/* If a menu item's text is too long, truncate it */
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+}
